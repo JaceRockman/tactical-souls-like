@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3m5uua0vi26y"]
+
+[ext_resource type="Texture2D" uid="uid://bb5yo4baxsn7p" path="res://Assets/plains_background.png" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://durst2jdjkq04" path="res://start_button.gd" id="2_0xm2m"]
+
+[node name="Main" type="Node2D"]
+
+[node name="PlainsBackground" type="Sprite2D" parent="."]
+position = Vector2(126, 99)
+scale = Vector2(0.825, 0.825)
+texture = ExtResource("1_ig7tw")
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = 94.0
+offset_top = 51.0
+offset_right = 157.0
+offset_bottom = 83.0
+text = "Start"
+script = ExtResource("2_0xm2m")

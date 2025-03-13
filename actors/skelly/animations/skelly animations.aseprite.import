@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cuuvi77b1mk10"
+path="res://.godot/imported/skelly animations.aseprite-d8c70a9b5c351206d181c174e850ab59.res"
+
+[deps]
+
+source_file="res://actors/skelly/animations/skelly animations.aseprite"
+dest_files=["res://.godot/imported/skelly animations.aseprite-d8c70a9b5c351206d181c174e850ab59.res"]
+
+[params]
+

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd481tslpaxsx"]
+
+[ext_resource type="Script" uid="uid://bhkfmwu6gwivr" path="res://actors/shared/combatant.gd" id="1_704ru"]
+
+[node name="Combatant" type="Node2D"]
+script = ExtResource("1_704ru")

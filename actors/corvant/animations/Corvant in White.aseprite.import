@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dvij1i8wnvw18"
+path="res://.godot/imported/Corvant in White.aseprite-f8f26db967fdb4a082794f6f58ac8f21.res"
+
+[deps]
+
+source_file="res://actors/corvant/animations/Corvant in White.aseprite"
+dest_files=["res://.godot/imported/Corvant in White.aseprite-f8f26db967fdb4a082794f6f58ac8f21.res"]
+
+[params]
+

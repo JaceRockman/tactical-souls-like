@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://v4nqnhp2kd6q"]
+
+[ext_resource type="Script" path="res://actors/ghosty/ghosty_idle.gd" id="1_2km4a"]
+[ext_resource type="AnimationLibrary" uid="uid://ce4huj2tvyjci" path="res://actors/ghosty/ghosty.res" id="1_qgwk1"]
+[ext_resource type="Texture2D" uid="uid://c25tvjwjk3k8" path="res://Animations/ghosty_idle_body.png" id="2_u0luc"]
+[ext_resource type="Texture2D" uid="uid://c1qf08s45nlrp" path="res://Animations/ghosty_idle_eye.png" id="3_xpfq8"]
+[ext_resource type="Texture2D" uid="uid://dqf8h3yvhb0c3" path="res://Animations/ghosty_idle_pupil.png" id="4_5td8l"]
+
+[node name="GhostyIdle" type="Node2D"]
+script = ExtResource("1_2km4a")
+pupil_color = Color(1, 1, 1, 1)
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"ghosty": ExtResource("1_qgwk1")
+}
+
+[node name="Body" type="Sprite2D" parent="."]
+modulate = Color(0.29958, 0.1692, 0.36, 1)
+texture_filter = 1
+texture = ExtResource("2_u0luc")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Eye" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("3_xpfq8")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Pupil" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+texture = ExtResource("4_5td8l")
+hframes = 2
+vframes = 2
+frame = 3
