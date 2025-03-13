@@ -13,31 +13,39 @@ func create_animations(target_node: Node, player: AnimationPlayer,  aseprite_fil
 
 func create_nodes_and_animations(aseprite_files: Array, options: Dictionary):
 	var root = Engine.get_main_loop().edited_scene_root
+	var modular_animated_sprite_2d
+	if root is ModularAnimatedSprite2D:
+		modular_animated_sprite_2d = root
+	else:
+		modular_animated_sprite_2d = root.get_node("./ModularAnimatedSprite2D")
 	
-	var anim_player: AnimationPlayer = _create_animation_player(root)
+	print(modular_animated_sprite_2d is ModularAnimatedSprite2D)
+	
+	var anim_player: AnimationPlayer = _create_animation_player(modular_animated_sprite_2d)
 
 	for index in range(options.layers.size()):
 		var layer = options.layers[index]
-		var sprite2d: Sprite2D = create_sprite_2d_for_layer(root, layer)
+		var sprite2d: Sprite2D = create_sprite_2d_for_layer(modular_animated_sprite_2d, layer)
 		var aseprite_file = aseprite_files[index]
 		_import(sprite2d, anim_player, aseprite_file, options)
+	
+	root.editor_state_changed
 
 func _import_layer_file(aseprite_files: Dictionary, layer_name: String):
 	var sheet_name: String = aseprite_files.sprite_sheet
 
-func _create_animation_player(root: ModularAnimatedSprite2D) -> AnimationPlayer:
+func _create_animation_player(mas2d: ModularAnimatedSprite2D) -> AnimationPlayer:
 	var anim_player: AnimationPlayer = AnimationPlayer.new()
 	anim_player.name = "AnimationPlayer"
-	root.add_child(anim_player)
-	anim_player.owner = root
+	mas2d.add_child(anim_player)
+	anim_player.owner = mas2d
 	return anim_player
 
-func create_sprite_2d_for_layer(root: ModularAnimatedSprite2D, layer_name: String) -> Sprite2D:
+func create_sprite_2d_for_layer(mas2d: ModularAnimatedSprite2D, layer_name: String) -> Sprite2D:
 	var sprite2d: Sprite2D = Sprite2D.new()
 	sprite2d.name = layer_name
-	root.add_child(sprite2d)
-	sprite2d.owner = root
-	print("setting script")
+	mas2d.add_child(sprite2d)
+	sprite2d.owner = mas2d
 	sprite2d.set_script(load("res://addons/AsepriteWizard/creators/modular_animation/modular_animation_piece.gd"))
 	return sprite2d
 

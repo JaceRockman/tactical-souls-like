@@ -35,3 +35,13 @@ func _on_damage(damage_amount: int) -> void:
 
 func attack(damage_quantity: int) -> void:
 	emit_signal("damage", damage_quantity)
+
+enum Directions {
+	LEFT,
+	RIGHT
+}
+
+func move(direction: String):
+	match direction:
+		"LEFT": position.x -= 12
+		"RIGHT": position.x += 12

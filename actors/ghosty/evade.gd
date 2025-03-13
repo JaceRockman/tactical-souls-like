@@ -6,6 +6,9 @@ extends State
 @export var attack_state: State
 @export var evade_state: State
 @export var idle_state: State
+@export var jump_state: State
+@export var move_forward_state: State
+@export var move_back_state: State
 
 var buffered_state: State
 
@@ -21,6 +24,12 @@ func update(delta: float) -> State:
 		buffered_state = attack_state
 	if Input.is_action_just_released("Defend") and in_buffer():
 		buffered_state = evade_state
+	if Input.is_action_just_released("Jump") and in_buffer():
+		buffered_state = jump_state
+	if Input.is_action_just_released("Move Forward") and in_buffer():
+		buffered_state = move_forward_state
+	if Input.is_action_just_released("Move Back") and in_buffer():
+		buffered_state = move_back_state
 	if !animation_player.current_animation and !buffered_state:
 		return idle_state
 	elif !animation_player.current_animation and buffered_state:
