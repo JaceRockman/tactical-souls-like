@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bm61kqrsrseyp"
+path="res://.godot/imported/overworld skelly.aseprite-0e01d763bae5b8af5b0fc2da360ff9e7.res"
+
+[deps]
+
+source_file="res://characters/skelly/overworld/overworld skelly.aseprite"
+dest_files=["res://.godot/imported/overworld skelly.aseprite-0e01d763bae5b8af5b0fc2da360ff9e7.res"]
+
+[params]
+

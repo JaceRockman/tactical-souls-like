@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmucem5vpuygi"]
+
+[ext_resource type="Texture2D" uid="uid://bb5yo4baxsn7p" path="res://levels/plains_background.png" id="1_nus5b"]
+[ext_resource type="PackedScene" uid="uid://dai6hag5hb0gj" path="res://characters/corvant/combat/corvant.tscn" id="3_hu44a"]
+[ext_resource type="PackedScene" uid="uid://ddjuo3ko2pqil" path="res://characters/components/health_bar.tscn" id="4_0cr88"]
+[ext_resource type="PackedScene" uid="uid://cuqycpnv6fyj" path="res://characters/ghosty/ghosty.tscn" id="5_4t6hg"]
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="PlainsBackground" type="Sprite2D" parent="."]
+position = Vector2(128, 96)
+scale = Vector2(0.804167, 0.804167)
+texture = ExtResource("1_nus5b")
+
+[node name="Corvant" parent="." instance=ExtResource("3_hu44a")]
+position = Vector2(143, 113)
+
+[node name="OpponentHealthBar" parent="Corvant" node_paths=PackedStringArray("combatant") instance=ExtResource("4_0cr88")]
+offset_left = -51.0
+offset_top = 21.0
+offset_right = 8.0
+offset_bottom = 25.0
+value = 100.0
+combatant = NodePath("..")
+
+[node name="Ghosty" parent="." instance=ExtResource("5_4t6hg")]
+position = Vector2(125, 117)
+
+[node name="PlayerHealthBar" parent="Ghosty" node_paths=PackedStringArray("combatant") instance=ExtResource("4_0cr88")]
+offset_left = -21.0
+offset_top = 17.0
+offset_right = 3.0
+offset_bottom = 21.0
+combatant = NodePath("..")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(128, 72)
+
+[connection signal="damage" from="Corvant" to="Ghosty" method="_on_damage"]
+[connection signal="damage" from="Ghosty" to="Corvant" method="_on_damage"]

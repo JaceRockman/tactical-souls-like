@@ -1,0 +1,269 @@
+[gd_scene load_steps=13 format=3 uid="uid://dr6wi544pc6pp"]
+
+[ext_resource type="Script" uid="uid://csowvqfhx5xcc" path="res://characters/corvant/combat/skelly_animations.gd" id="2_iai8q"]
+[ext_resource type="Texture2D" uid="uid://bb7e2ug7xenj7" path="res://characters/skelly/combat/skelly_head.png" id="3_7g5uf"]
+[ext_resource type="Script" uid="uid://cjbxul34l8y73" path="res://characters/corvant/combat/skelly.gd" id="3_a5tls"]
+[ext_resource type="Texture2D" uid="uid://b20qbwn76gh1b" path="res://characters/skelly/combat/skelly_eyes.png" id="4_tnf1v"]
+[ext_resource type="Texture2D" uid="uid://baa4gtwfntoxi" path="res://characters/skelly/combat/skelly_body.png" id="5_wmk74"]
+[ext_resource type="Texture2D" uid="uid://rscv0krg6co4" path="res://characters/skelly/combat/skelly_hands.png" id="6_30up8"]
+[ext_resource type="Texture2D" uid="uid://brs4uftxvf18a" path="res://characters/skelly/combat/skelly_sword.png" id="7_0f6kh"]
+[ext_resource type="Texture2D" uid="uid://ro7lrliq72nr" path="res://characters/skelly/combat/skelly_axe.png" id="8_rexpx"]
+[ext_resource type="Texture2D" uid="uid://dd0ebcttpgx5p" path="res://characters/skelly/combat/skelly_feet.png" id="9_gyyk2"]
+
+[sub_resource type="Animation" id="Animation_us7w2"]
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Eyes:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [5, 6, 7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [5, 6, 7]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hands:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [5, 6, 7]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sword:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [5, 6, 7]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Axe:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [5, 6, 7]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Feet:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [5, 6, 7]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("..")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [1],
+"method": &"attack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_1lopf"]
+length = 1.33334
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Eyes:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hands:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sword:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Axe:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Feet:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nedle"]
+_data = {
+&"attack": SubResource("Animation_us7w2"),
+&"idle": SubResource("Animation_1lopf")
+}
+
+[node name="Skelly" type="AnimatedSprite2D" node_paths=PackedStringArray("anim")]
+position = Vector2(90, 52)
+script = ExtResource("3_a5tls")
+anim = NodePath("Animations/AnimationPlayer")
+
+[node name="Animations" type="Node2D" parent="."]
+script = ExtResource("2_iai8q")
+body_color = Color(0.591762, 0.773657, 0.518799, 1)
+eye_color = Color(1, 0, 0, 1)
+feet_color = Color(0.592157, 0.772549, 0.517647, 1)
+hand_color = Color(0.592157, 0.772549, 0.517647, 1)
+sword_color = Color(1, 0, 0, 1)
+axe_color = Color(1, 0, 0, 1)
+head_color = Color(0.592157, 0.772549, 0.517647, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animations"]
+libraries = {
+&"skelly": SubResource("AnimationLibrary_nedle")
+}
+
+[node name="Head" type="Sprite2D" parent="Animations"]
+texture_filter = 1
+texture = ExtResource("3_7g5uf")
+hframes = 8
+frame = 5
+
+[node name="Eyes" type="Sprite2D" parent="Animations"]
+texture_filter = 1
+texture = ExtResource("4_tnf1v")
+hframes = 8
+frame = 5
+
+[node name="Body" type="Sprite2D" parent="Animations"]
+texture_filter = 1
+texture = ExtResource("5_wmk74")
+hframes = 8
+frame = 5
+
+[node name="Hands" type="Sprite2D" parent="Animations"]
+texture_filter = 1
+texture = ExtResource("6_30up8")
+hframes = 8
+frame = 5
+
+[node name="Feet" type="Sprite2D" parent="Animations"]
+texture_filter = 1
+texture = ExtResource("9_gyyk2")
+hframes = 8
+frame = 5
+
+[node name="Sword" type="Sprite2D" parent="Animations"]
+visible = false
+texture_filter = 1
+texture = ExtResource("7_0f6kh")
+hframes = 8
+frame = 5
+
+[node name="Axe" type="Sprite2D" parent="Animations"]
+texture_filter = 1
+texture = ExtResource("8_rexpx")
+hframes = 8
+frame = 5

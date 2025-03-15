@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://hbwwvl1fy6gj"]
+
+[ext_resource type="Script" uid="uid://bdfd54gclw3n5" path="res://characters/components/weapon_state_machine.gd" id="1_efuyf"]
+
+[node name="WeaponStateMachine" type="Node"]
+script = ExtResource("1_efuyf")

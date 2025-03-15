@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=4 uid="uid://xe7pr4g32s6"]
+
+[ext_resource type="Script" uid="uid://ddf48nb5nthju" path="res://characters/corvant/overworld/corvant_overworld.gd" id="1_r5jnh"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_e6057"]
+_data = PackedByteArray("AAADAAUAAAABAAAAJAAAABIAAACkAAAAUklGRpwAAABXRUJQVlA4TI8AAAAvI0AEECcgECA0CPHfpUZIQHjjq8uKQDY5Vf5kbf4DAD85Gxy0jSRJaQbV6iWwWgStQnAPf1LTcy+BiP5PACCCMdhKAJlIoQyAWLogkBfVRrlpx3SeMZ3X4Mgjemhvbs9JVQXIVUe5eIF2HXYA7XYAareTwQOyC0Bud/1BdmcudMcCqWBMTUrloFROkiZJAAA=")
+size_override = Vector2(36, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulpst"]
+atlas = SubResource("PortableCompressedTexture2D_e6057")
+region = Rect2(0, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_576qh"]
+atlas = SubResource("PortableCompressedTexture2D_e6057")
+region = Rect2(18, 0, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fnncr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulpst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_576qh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_fnncr")
+animation = &"idle"
+script = ExtResource("1_r5jnh")
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": true,
+"layer_section": true,
+"output_section": true,
+"pending_changes": {},
+"slice_section": true
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"should_round_fps": true,
+"slice": "",
+"source": "res://actors/corvant/animations/Corvant Overworld.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "9aeb1a6d1716cc34126d25f1bcc50961"

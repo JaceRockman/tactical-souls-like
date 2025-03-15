@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dxxo3syqt28nb"
+path="res://.godot/imported/ghosty_sprite_sheet.aseprite-777a6458295f73c214296f1f02f03fcf.res"
+
+[deps]
+
+source_file="res://characters/ghosty/ghosty_sprite_sheet.aseprite"
+dest_files=["res://.godot/imported/ghosty_sprite_sheet.aseprite-777a6458295f73c214296f1f02f03fcf.res"]
+
+[params]
+

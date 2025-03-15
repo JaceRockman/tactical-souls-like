@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cjte8a5sqr18d"
+path="res://.godot/imported/Corvant Overworld.aseprite-9d7c91302406fe2cf0e36616b4f27195.res"
+
+[deps]
+
+source_file="res://characters/corvant/overworld/Corvant Overworld.aseprite"
+dest_files=["res://.godot/imported/Corvant Overworld.aseprite-9d7c91302406fe2cf0e36616b4f27195.res"]
+
+[params]
+

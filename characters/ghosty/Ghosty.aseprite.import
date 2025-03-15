@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://b0py5gwqw5iig"
+path="res://.godot/imported/Ghosty.aseprite-b7ab0195d84daafc4671b89d10f09bdd.res"
+
+[deps]
+
+source_file="res://characters/ghosty/Ghosty.aseprite"
+dest_files=["res://.godot/imported/Ghosty.aseprite-b7ab0195d84daafc4671b89d10f09bdd.res"]
+
+[params]
+

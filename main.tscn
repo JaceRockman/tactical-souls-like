@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b3m5uua0vi26y"]
 
-[ext_resource type="Texture2D" uid="uid://bb5yo4baxsn7p" path="res://Assets/plains_background.png" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://durst2jdjkq04" path="res://start_button.gd" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://bb5yo4baxsn7p" path="res://levels/plains_background.png" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://durst2jdjkq04" path="res://control/menus/start_button.gd" id="2_0xm2m"]
 
 [node name="Main" type="Node2D"]
 

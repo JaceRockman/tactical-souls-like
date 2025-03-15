@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://daw48j5xj581x"]
-
-[ext_resource type="Script" uid="uid://cs88fm51tqbk5" path="res://modular_sprite_2d.gd" id="1_fdfi0"]
-
-[node name="ModularSprite2D" type="Node2D"]
-script = ExtResource("1_fdfi0")
-metadata/_custom_type_script = "uid://cs88fm51tqbk5"

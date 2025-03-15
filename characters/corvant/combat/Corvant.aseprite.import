@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://vkx0is4pifuc"
+path="res://.godot/imported/Corvant.aseprite-0ff7498f7b451b3cba124b30eebd32ae.res"
+
+[deps]
+
+source_file="res://characters/corvant/combat/Corvant.aseprite"
+dest_files=["res://.godot/imported/Corvant.aseprite-0ff7498f7b451b3cba124b30eebd32ae.res"]
+
+[params]
+

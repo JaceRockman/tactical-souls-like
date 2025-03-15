@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://c5heu2dke0qd5"
+path="res://.godot/imported/ghosty_attack.aseprite-1228a0287737cef1771cab55199afdd2.res"
+
+[deps]
+
+source_file="res://characters/ghosty/animations/ghosty_attack.aseprite"
+dest_files=["res://.godot/imported/ghosty_attack.aseprite-1228a0287737cef1771cab55199afdd2.res"]
+
+[params]
+
