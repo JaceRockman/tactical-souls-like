@@ -18,3 +18,6 @@ offset_right = 157.0
 offset_bottom = 83.0
 text = "Start"
 script = ExtResource("2_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
