@@ -117,4 +117,5 @@ combatant = NodePath("../../Corvant")
 [connection signal="damage" from="Corvant" to="Ghosty" method="_on_damage"]
 [connection signal="damage" from="Ghosty" to="Corvant" method="_on_damage"]
 [connection signal="finish_movement" from="Ghosty" to="." method="_on_player_finish_movement"]
+[connection signal="new_combat_position" from="Ghosty" to="Corvant" method="update_combat_position"]
 [connection signal="start_movement" from="Ghosty" to="." method="_on_player_start_movement"]
