@@ -1,44 +1,120 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmucem5vpuygi"]
+[gd_scene load_steps=7 format=4 uid="uid://bmucem5vpuygi"]
 
+[ext_resource type="Script" uid="uid://66p4tdvtp4bx" path="res://levels/tutorial/tutorial_combat.gd" id="1_f1gsm"]
 [ext_resource type="Texture2D" uid="uid://bb5yo4baxsn7p" path="res://levels/plains_background.png" id="1_nus5b"]
 [ext_resource type="PackedScene" uid="uid://dai6hag5hb0gj" path="res://characters/corvant/combat/corvant.tscn" id="3_hu44a"]
 [ext_resource type="PackedScene" uid="uid://ddjuo3ko2pqil" path="res://characters/components/health_bar.tscn" id="4_0cr88"]
 [ext_resource type="PackedScene" uid="uid://cuqycpnv6fyj" path="res://characters/ghosty/ghosty.tscn" id="5_4t6hg"]
 
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_w201w"]
+_data = PackedByteArray("AAADAAUAAAABAAAAAAEAAJAAAABiBQAAUklGRloFAABXRUJQVlA4TE0FAAAv/8AjACcgpiFauPUvaJooDUCAMaLsAf9fKJFlI+03nsBJvL/PW8x/uMU4R9MF35FkVbRt21ahjioAaSBANWoVYNBKF6BSR+qvFIXCo9Y6HvMZ0f8JEPRBUFUxZg+EIOaTGciwg4hIhN1oAo0YMqGvKcHZ2GcAUABVVYQM0hsSdwGEHUREIuaY5xSLqhqQZ3bFVWKTJGzpI+YaMf61BB6ooupvIhI9QbAoBAvj0EVM5cZ8UFWt+jsgduwk+qJD7DwKYi4g4VErLYBdVVUBeMI2DKUHEKfIvKp5rg4M4BDBirxAeswO4K2WrsiDqqoVQBgER5UurJIei/IWkWg8PdXCQDwQicukxxnJgBUQJM5AVZMOBEEkDlQBiSEO4Ap7sKCOAAQBSZmoABC6fpQABJFRGxCA9PEgTR7Ik+T16aiqaQPCqHFEhC4uy9uCPMmr+OCLgwpTxGh0XMXGOVVhZAMincxhIFhDj+zCvqsIRSSeEox+YD+vg0bmbZoMDCh2XBRHyYI8l0SEaAHgqE3VGQ6ullgisinIEgCelpchVdVUFTPk9drFLoiI+OJUez6N7IoToC+7KrRfwOcziggg/W8SRzEKgDRxFQNT7rZKVY204nqNUezfVYOIiCGIAOrM80kyuwKmuAhAmsgOPmOMIgKgqqIzowcOmYsLyLyorosSY5A4Ch5V1ZmrPJldAe4ENPZ5DSbouUYJQTCIcFQASD5S5IkcHDLRSABoHM5UV2N2IEbxhZFZ5yS6oqsmZpgngATQLAlBXJiATlxFBLKswm7tiOaIghCBaggQDAzrAjfcmnSU18DXyOwIrgBgC+UqEkZxQkeZuW0DSXAUQ9SE1PXrSPKaxQt39bSGM4aIEImo9RAynpAXVV/zBIgA0KqHILyTbgHqGRnAGrhwAL0IQeI2ZgcAhAW1SwPsqR2bJwcRbEPLn6XRvSAtQduW9mSXKpABgM1ikOCrmNBB3qY7CE9NGDa2QYQvWfE0XUKL2Qcnh4ITSB5GTyNc6mmL6poGMBvZFbfl3DG7avJgFSzxZQA8qhlsQCPhUqyI8ZDG83KmuevKibSGAPAGZgZIR1oDVx2F6GnIANp5uZHwLuOoTUQX0N6DZJ6Cvw2ylTvFQA7SLTiDuWusqtUjvn4ddEM+hWRuJN8GaR0OIomqqmlJWoZx/RB5JgCaVokdB1XVwFTGLgxyyx1/qSocAqCmMwDom+UGIJMLUNMp9b3YMgA0/tI0pf2CuEDfpFk5wyQXoK4RGx+DsOsSfIXs+GWEKf1csDj6w8L3Ulrhe/3x9fQQxk+lu2A0MstcnYLBY7JHDUwlj/lB2gF1AYCPw2MayYw1+kX456Ra6Q1o5rPyDv0O/Db6pcJpelD6BBlhXRq1D4V30wXtgHpGHekB+i34OfS0NJMPq13ylFKKdS+28SiXQRmq817swaO4f4x7cb+sRzF/unvpL4MfS1fd1r12qI8rdMvL4Alco/Z9BS01750MdHjfo27jtUfvy34svXtU9V7K3ONN1Lni4SjlR++DW/nRezF/tONQdtwn6FHvfdW9eAfTq35U72WSzofj517GOnpN+Be9Vq300LHWwUXyTR5n8JjXMfR+FvofO14uHsFTXhMsfKx60f84gKe8OF/Wvjj92PY6heNH2UzyUQr5KCb7PRw/ymuPyUc59VWWL/Bf9n3Cv0vkW8m3u3hu30m+wWWL2KWUy0Xk9qFk0604RT7TZcNFRG7FfRG5fSAZ3qYuIlK+4WUkU9/yIn25iMjtO4mI3EopReTylS4itzIUuX2fi9ykfPVbKbfv9n///xsxAA==")
+size_override = Vector2(256, 144)
+
 [node name="Tutorial" type="Node2D"]
+script = ExtResource("1_f1gsm")
 
 [node name="PlainsBackground" type="Sprite2D" parent="."]
 position = Vector2(128, 96)
 scale = Vector2(0.804167, 0.804167)
 texture = ExtResource("1_nus5b")
 
+[node name="ForestBackground1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-128, 72)
+texture = SubResource("PortableCompressedTexture2D_w201w")
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://levels/tutorial/woods_background.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f3e0a10e03de0b56281f3b7c74919ad1"
+
+[node name="ForestBackground2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(128, 72)
+texture = SubResource("PortableCompressedTexture2D_w201w")
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://levels/tutorial/woods_background.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f3e0a10e03de0b56281f3b7c74919ad1"
+
+[node name="ForestBackground3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(384, 72)
+texture = SubResource("PortableCompressedTexture2D_w201w")
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://levels/tutorial/woods_background.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f3e0a10e03de0b56281f3b7c74919ad1"
+
 [node name="Corvant" parent="." instance=ExtResource("3_hu44a")]
 position = Vector2(160, 90)
 scale = Vector2(-2, 2)
-
-[node name="OpponentHealthBar" parent="Corvant" node_paths=PackedStringArray("combatant") instance=ExtResource("4_0cr88")]
-top_level = true
-offset_left = 145.0
-offset_top = 132.0
-offset_right = 195.0
-offset_bottom = 140.0
-value = 100.0
-combatant = NodePath("..")
 
 [node name="Ghosty" parent="." instance=ExtResource("5_4t6hg")]
 position = Vector2(123, 98)
 scale = Vector2(2, 2)
 
-[node name="PlayerHealthBar" parent="Ghosty" node_paths=PackedStringArray("combatant") instance=ExtResource("4_0cr88")]
+[node name="Camera2D" type="Camera2D" parent="."]
 top_level = true
+position = Vector2(128, 72)
+
+[node name="PlayerHealthBar" parent="Camera2D" node_paths=PackedStringArray("combatant") instance=ExtResource("4_0cr88")]
 offset_left = 80.0
 offset_top = 132.0
 offset_right = 130.0
 offset_bottom = 140.0
-combatant = NodePath("..")
+combatant = NodePath("../../Ghosty")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(128, 72)
+[node name="OpponentHealthBar" parent="Camera2D" node_paths=PackedStringArray("combatant") instance=ExtResource("4_0cr88")]
+offset_left = 145.0
+offset_top = 132.0
+offset_right = 195.0
+offset_bottom = 140.0
+value = 100.0
+combatant = NodePath("../../Corvant")
 
 [connection signal="damage" from="Corvant" to="Ghosty" method="_on_damage"]
 [connection signal="damage" from="Ghosty" to="Corvant" method="_on_damage"]
+[connection signal="finish_movement" from="Ghosty" to="." method="_on_player_finish_movement"]
+[connection signal="start_movement" from="Ghosty" to="." method="_on_player_start_movement"]

@@ -8,6 +8,13 @@ extends AnimatedSprite2D
 @onready var state_machine = $StateMachine
 @onready var astar_grid: AStarGrid2D = AStarGrid2D.new()
 
+enum Direction {
+	FOREWARD,
+	BACKWARD,
+}
+
+signal start_movement(direction: String)
+signal finish_movement(direction: String)
 signal damage(amount: int)
 
 func _ready() -> void:
@@ -36,15 +43,16 @@ func _on_damage(damage_amount: int) -> void:
 func attack(damage_quantity: int) -> void:
 	emit_signal("damage", damage_quantity)
 
-enum Directions {
-	LEFT,
-	RIGHT
-}
 
-func move(direction: String):
-	match direction:
-		"LEFT": position.x -= 24
-		"RIGHT": position.x += 24
+
+func movement(direction: String, movement_start: bool):
+	if movement_start:
+		emit_signal("start_movement", direction)
+	else:
+		match direction:
+			"BACKWARD": position.x -= 24
+			"FOREWARD": position.x += 24
+		emit_signal("finish_movement", direction)
 
 func flip():
 	scale = scale * Vector2(-1, 1)
