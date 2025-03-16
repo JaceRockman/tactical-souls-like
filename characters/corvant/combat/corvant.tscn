@@ -1,11 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://dai6hag5hb0gj"]
+[gd_scene load_steps=16 format=3 uid="uid://dai6hag5hb0gj"]
 
 [ext_resource type="Script" uid="uid://cqfx3qp2tr1qp" path="res://characters/corvant/combat/corvant.gd" id="1_ovtm5"]
-[ext_resource type="Script" uid="uid://bigg8t77o2t7v" path="res://characters/corvant/combat/corvant_combat_animation.gd" id="1_takkj"]
 [ext_resource type="Texture2D" uid="uid://dei3fr76w2oku" path="res://characters/corvant/combat/corvant_Head.png" id="2_tcoa7"]
 [ext_resource type="Texture2D" uid="uid://ff4r652sjqrb" path="res://characters/corvant/combat/corvant_Eyes.png" id="3_gs54v"]
+[ext_resource type="Script" uid="uid://dni2a7174430" path="res://addons/AsepriteWizard/creators/modular_animation/modular_animated_sprite_2d.gd" id="3_xfrf1"]
 [ext_resource type="Texture2D" uid="uid://2hlnl524em2q" path="res://characters/corvant/combat/corvant_Torso.png" id="4_23non"]
 [ext_resource type="Texture2D" uid="uid://83l1wcd3bjkb" path="res://characters/corvant/combat/corvant_Right Arm.png" id="5_31pgh"]
+[ext_resource type="Script" uid="uid://crhyvv7hhdrn8" path="res://characters/components/modular_animation_child.gd" id="5_dyqy2"]
 [ext_resource type="Texture2D" uid="uid://devxi1lyrncs0" path="res://characters/corvant/combat/corvant_Left Arm.png" id="6_gbrjc"]
 [ext_resource type="Texture2D" uid="uid://b0i5hltbxqgnn" path="res://characters/corvant/combat/corvant_Right Leg.png" id="7_xiami"]
 [ext_resource type="Texture2D" uid="uid://dswml2lj0r2xq" path="res://characters/corvant/combat/corvant_Left Leg.png" id="8_bnraa"]
@@ -18,7 +19,7 @@ length = 2.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Head:frame")
+tracks/0/path = NodePath("../ModularAnimatedSprite2D/Head:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -30,7 +31,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Eyes:frame")
+tracks/1/path = NodePath("../ModularAnimatedSprite2D/Eyes:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -42,7 +43,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Torso:frame")
+tracks/2/path = NodePath("../ModularAnimatedSprite2D/Torso:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -54,7 +55,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Right Arm:frame")
+tracks/3/path = NodePath("../ModularAnimatedSprite2D/Right Arm:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -66,7 +67,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Left Arm:frame")
+tracks/4/path = NodePath("../ModularAnimatedSprite2D/Left Arm:frame")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -78,7 +79,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Right Leg:frame")
+tracks/5/path = NodePath("../ModularAnimatedSprite2D/Right Leg:frame")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -90,7 +91,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Left Leg:frame")
+tracks/6/path = NodePath("../ModularAnimatedSprite2D/Left Leg:frame")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -102,7 +103,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Wings:frame")
+tracks/7/path = NodePath("../ModularAnimatedSprite2D/Wings:frame")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -127,16 +128,15 @@ tracks/8/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_fhslh"]
-length = 2.0
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Head:frame")
+tracks/0/path = NodePath("../ModularAnimatedSprite2D/Head:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 4]
@@ -144,11 +144,11 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Eyes:frame")
+tracks/1/path = NodePath("../ModularAnimatedSprite2D/Eyes:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 4]
@@ -156,11 +156,11 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Torso:frame")
+tracks/2/path = NodePath("../ModularAnimatedSprite2D/Torso:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 4]
@@ -168,11 +168,11 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Right Arm:frame")
+tracks/3/path = NodePath("../ModularAnimatedSprite2D/Right Arm:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 4]
@@ -180,11 +180,11 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Left Arm:frame")
+tracks/4/path = NodePath("../ModularAnimatedSprite2D/Left Arm:frame")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 4]
@@ -192,11 +192,11 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Right Leg:frame")
+tracks/5/path = NodePath("../ModularAnimatedSprite2D/Right Leg:frame")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 4]
@@ -204,11 +204,11 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Left Leg:frame")
+tracks/6/path = NodePath("../ModularAnimatedSprite2D/Left Leg:frame")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 4]
@@ -216,11 +216,11 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Wings:frame")
+tracks/7/path = NodePath("../ModularAnimatedSprite2D/Wings:frame")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 4]
@@ -235,61 +235,77 @@ _data = {
 [node name="Corvant" type="AnimatedSprite2D" node_paths=PackedStringArray("anim")]
 scale = Vector2(-1, 1)
 script = ExtResource("1_ovtm5")
-anim = NodePath("Animations/AnimationPlayer")
+anim = NodePath("ModularAnimatedSprite2D/AnimationPlayer")
 
-[node name="Animations" type="Node2D" parent="."]
-script = ExtResource("1_takkj")
-body_color = Color(0.194349, 0.194349, 0.194349, 1)
-eye_color = Color(0.898039, 0.882353, 0, 1)
-head_color = Color(0.481274, 6.61798e-07, 4.81307e-07, 1)
-right_arm_color = Color(0.532709, 0.530231, 0.267626, 1)
-left_arm_color = Color(0.533333, 0.529412, 0.266667, 1)
-right_leg_color = Color(0.533333, 0.529412, 0.266667, 1)
-left_leg_color = Color(0.533333, 0.529412, 0.266667, 1)
-wing_color = Color(1, 1, 1, 1)
+[node name="ModularAnimatedSprite2D" type="Node2D" parent="."]
+script = ExtResource("3_xfrf1")
+metadata/_custom_type_script = "uid://dni2a7174430"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Animations"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ModularAnimatedSprite2D"]
 libraries = {
 &"": SubResource("AnimationLibrary_abr72"),
 &"corvant": SubResource("AnimationLibrary_vn1mt")
 }
 
-[node name="Head" type="Sprite2D" parent="Animations"]
+[node name="Head" type="Sprite2D" parent="ModularAnimatedSprite2D"]
+modulate = Color(0.46, 0.1426, 0.1426, 1)
 texture_filter = 1
 texture = ExtResource("2_tcoa7")
 hframes = 5
+script = ExtResource("5_dyqy2")
+color = Color(0.46, 0.1426, 0.1426, 1)
 
-[node name="Eyes" type="Sprite2D" parent="Animations"]
+[node name="Eyes" type="Sprite2D" parent="ModularAnimatedSprite2D"]
+modulate = Color(0.894118, 0.839216, 0, 1)
 texture_filter = 1
 texture = ExtResource("3_gs54v")
 hframes = 5
+script = ExtResource("5_dyqy2")
+color = Color(0.894118, 0.839216, 0, 1)
 
-[node name="Torso" type="Sprite2D" parent="Animations"]
+[node name="Torso" type="Sprite2D" parent="ModularAnimatedSprite2D"]
+modulate = Color(0.27, 0.21978, 0.1728, 1)
 texture_filter = 1
 texture = ExtResource("4_23non")
 hframes = 5
+script = ExtResource("5_dyqy2")
+color = Color(0.27, 0.21978, 0.1728, 1)
 
-[node name="Right Arm" type="Sprite2D" parent="Animations"]
+[node name="Right Arm" type="Sprite2D" parent="ModularAnimatedSprite2D"]
+modulate = Color(0.533333, 0.529412, 0.266667, 1)
 texture_filter = 1
 texture = ExtResource("5_31pgh")
 hframes = 5
+script = ExtResource("5_dyqy2")
+color = Color(0.533333, 0.529412, 0.266667, 1)
 
-[node name="Left Arm" type="Sprite2D" parent="Animations"]
+[node name="Left Arm" type="Sprite2D" parent="ModularAnimatedSprite2D"]
+modulate = Color(0.533333, 0.529412, 0.266667, 1)
 texture_filter = 1
 texture = ExtResource("6_gbrjc")
 hframes = 5
+script = ExtResource("5_dyqy2")
+color = Color(0.533333, 0.529412, 0.266667, 1)
 
-[node name="Right Leg" type="Sprite2D" parent="Animations"]
+[node name="Right Leg" type="Sprite2D" parent="ModularAnimatedSprite2D"]
+modulate = Color(0.533333, 0.529412, 0.266667, 1)
 texture_filter = 1
 texture = ExtResource("7_xiami")
 hframes = 5
+script = ExtResource("5_dyqy2")
+color = Color(0.533333, 0.529412, 0.266667, 1)
 
-[node name="Left Leg" type="Sprite2D" parent="Animations"]
+[node name="Left Leg" type="Sprite2D" parent="ModularAnimatedSprite2D"]
+modulate = Color(0.533333, 0.529412, 0.266667, 1)
 texture_filter = 1
 texture = ExtResource("8_bnraa")
 hframes = 5
+script = ExtResource("5_dyqy2")
+color = Color(0.533333, 0.529412, 0.266667, 1)
 
-[node name="Wings" type="Sprite2D" parent="Animations"]
+[node name="Wings" type="Sprite2D" parent="ModularAnimatedSprite2D"]
 texture_filter = 1
 texture = ExtResource("9_eqggs")
 hframes = 5
+script = ExtResource("5_dyqy2")
+color = Color(1, 1, 1, 1)

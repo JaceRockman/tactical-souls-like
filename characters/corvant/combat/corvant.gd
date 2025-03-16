@@ -1,7 +1,5 @@
 extends AnimatedSprite2D
 
-@onready var corvant: AnimatedSprite2D = $"."
-
 @export var anim: AnimationPlayer
 
 var rng = RandomNumberGenerator.new()
@@ -9,7 +7,6 @@ var frame_counter = 0
 var attack_count = 200
 var damage_state = 0
 var combat_position: Vector2 = Vector2(1, 0)
-@export var invulnerable = false
 @export var max_health = 5
 @export var current_health = 5
 
@@ -24,11 +21,11 @@ func _process(delta: float) -> void:
 	if damage_state > 0:
 		damage_state -= 1
 	elif damage_state == 0:
-		corvant.set_modulate(Color(1, 1, 1, 1))
-		corvant.modulate
+		set_modulate(Color(1, 1, 1, 1))
+		modulate
 	
 	if current_health <= 0:
-		corvant.queue_free()
+		queue_free()
 	
 	if frame_counter >= attack_count:
 		anim.play("corvant/attack")
@@ -45,13 +42,11 @@ func plan_next_attack():
 	attack_count = rng.randi_range(60, 150)
 
 func _on_damage(damage_amount: int, target_positions) -> void:
-	print(target_positions)
-	print(combat_position)
 	if target_positions.has(combat_position):
 		damage_state = 6
 		current_health -= damage_amount
-		corvant.set_modulate(Color(1, 0, 0, 1))
-		corvant.modulate
+		set_modulate(Color(1, 0, 0, 1))
+		modulate
 
 func update_combat_position(movement_vector: Vector2):
 	combat_position += movement_vector
