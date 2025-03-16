@@ -11,6 +11,7 @@ func _ready() -> void:
 	value = combatant.max_health
 	damage_bar.max_value = max_value
 	damage_bar.value = value
+	top_level = true
 
 func _process(delta: float) -> void:
 	value = combatant.current_health

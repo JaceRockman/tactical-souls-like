@@ -43,5 +43,11 @@ enum Directions {
 
 func move(direction: String):
 	match direction:
-		"LEFT": position.x -= 12
-		"RIGHT": position.x += 12
+		"LEFT": position.x -= 24
+		"RIGHT": position.x += 24
+
+func flip():
+	scale = scale * Vector2(-1, 1)
+
+func _on_corvant_damage(amount: int) -> void:
+	pass # Replace with function body.
